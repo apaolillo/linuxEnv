@@ -1,0 +1,8 @@
+[user]
+	name = Antonio Paolillo
+	email = antonio.paolillo@ulb.ac.be
+[core]
+	editor = vim
+	whitespace = trailing-space,space-before-tab
+[color]
+	ui = true
