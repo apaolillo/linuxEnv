@@ -3,10 +3,17 @@
 
 set -e
 
+# Important variables
 EMAIL=antonio.paolillo@ulb.ac.be
-ALL_PACKAGES=vim git
 DEVENV_REPO_DIR=.
 CONFIGFILES_DIR=$DEVENV_REPO_DIR/configFiles
+
+## List of packages
+# Main packages
+ALL_PACKAGES=vim git xchat
+# Temporary: to integrate the dropbox icon in the Gnome Unity toolbar
+ALL_PACKAGES=$ALL_PACKAGES libappindicator1
+
 
 # Check for SSH key
 if [ ! -f ~/.ssh/id_rsa ]; then
@@ -17,7 +24,7 @@ fi
 # Configure git
 cp $CONFIGFILES_DIR/.gitconfig $HOME/.gitconfig
 
-# Install main packages
+# Install all packages
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends $ALL_PACKAGES
 
