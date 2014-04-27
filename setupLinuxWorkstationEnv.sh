@@ -21,7 +21,7 @@ function downloadAndInstallDeb
     package_url=$2
     returnDir=`pwd`
     cd /tmp
-    wget $package_url
+    wget -O /tmp/$package_name $package_url
     sudo dpkg -i /tmp/$package_name
 }
 
@@ -54,7 +54,7 @@ bash setupHipperosDevEnv.sh
 cd $returnDir
 
 # Configure gnome terminal
-cp $CONFIGFILES_DIR/.%gconf.xml $HOME/.gconf/apps/gnome-terminal/keybindings/.
+cp $CONFIGFILES_DIR/%gconf.xml $HOME/.gconf/apps/gnome-terminal/keybindings/.
 
 # Color terminal with dark solarized
 returnDir=`pwd`
