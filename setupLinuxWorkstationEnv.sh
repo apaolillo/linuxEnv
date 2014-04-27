@@ -58,9 +58,8 @@ cp $CONFIGFILES_DIR/%gconf.xml $HOME/.gconf/apps/gnome-terminal/keybindings/.
 
 # Color terminal with dark solarized
 returnDir=`pwd`
-cd $GIT_REPOS
-mkdir configRepos
-cd configRepos
+mkdir -p $GIT_REPOS/configRepos
+cd $GIT_REPOS/configRepos
 git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
 cd gnome-terminal-colors-solarized
 ./set_dark.sh
