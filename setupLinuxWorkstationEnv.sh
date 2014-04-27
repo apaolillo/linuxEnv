@@ -10,9 +10,9 @@ CONFIGFILES_DIR=$DEVENV_REPO_DIR/configFiles
 
 ## List of packages
 # Main packages
-ALL_PACKAGES=vim git xchat
+ALL_PACKAGES="vim git xchat"
 # Temporary: to integrate the dropbox icon in the Gnome Unity toolbar
-ALL_PACKAGES=$ALL_PACKAGES libappindicator1
+ALL_PACKAGES="$ALL_PACKAGES libappindicator1"
 
 
 function downloadAndInstallDeb
