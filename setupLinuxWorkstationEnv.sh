@@ -15,6 +15,17 @@ ALL_PACKAGES=vim git xchat
 ALL_PACKAGES=$ALL_PACKAGES libappindicator1
 
 
+function downloadAndInstallDeb
+{
+    package_name=$1
+    package_url=$2
+    returnDir=`pwd`
+    cd /tmp
+    wget $package_url
+    sudo dpkg -i /tmp/$package_name
+}
+
+
 # Check for SSH key
 if [ ! -f ~/.ssh/id_rsa ]; then
     echo "There is no ssh key defined in ~/.ssh\nPlease use the following command:\n  ssh-keygen -t rsa -C \"$EMAIL\""
@@ -27,6 +38,10 @@ cp $CONFIGFILES_DIR/.gitconfig $HOME/.gitconfig
 # Install all packages
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends $ALL_PACKAGES
+
+# Download ad install deb packages
+downloadAndInstallDeb chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+downloadAndInstallDeb dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.0_amd64.deb
 
 # Configure machine for HIPPEROS
 GIT_REPOS=$HOME/git
