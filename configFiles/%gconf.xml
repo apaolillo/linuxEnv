@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="reset_and_clear" mtime="1398517939" type="string">
+		<stringvalue>&lt;Primary&gt;w</stringvalue>
+	</entry>
+</gconf>
