@@ -48,7 +48,7 @@ GIT_REPOS=$HOME/git
 returnDir=`pwd`
 mkdir -p $GIT_REPOS
 cd $GIT_REPOS
-git clone git@github.com:hipperos/hipperosKernel.git
+git clone git@github.com:hipperos/hipperosDevEnv.git
 cd $GIT_REPOS/hipperosDevEnv
 bash setupHipperosDevEnv.sh
 cd $returnDir
