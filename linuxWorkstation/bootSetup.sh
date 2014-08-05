@@ -3,7 +3,7 @@
 
 ssh-keygen -t rsa -C "antonio.paolillo@ulb.ac.be"
 
-sudo apt-get update 
+sudo apt-get update
 sudo apt-get install -y git
 git config --global user.name "Antonio Paolillo"
 git config --global user.email "antonio.paolillo@ulb.ac.be"

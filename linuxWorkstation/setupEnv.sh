@@ -45,23 +45,23 @@ downloadAndInstallDeb dropbox.deb https://www.dropbox.com/download?dl=packages/u
 
 # Configure machine for HIPPEROS
 GIT_REPOS=$HOME/git
-returnDir=`pwd`
 mkdir -p $GIT_REPOS
-cd $GIT_REPOS
+pushd $GIT_REPOS
 git clone git@github.com:hipperos/hipperosDevEnv.git
-cd $GIT_REPOS/hipperosDevEnv
+pushd $GIT_REPOS/hipperosDevEnv
 bash setupHipperosDevEnv.sh
-cd $returnDir
+popd
+popd
 
 # Configure gnome terminal
 cp $CONFIGFILES_DIR/%gconf.xml $HOME/.gconf/apps/gnome-terminal/keybindings/.
 
 # Color terminal with dark solarized
-returnDir=`pwd`
 mkdir -p $GIT_REPOS/configRepos
-cd $GIT_REPOS/configRepos
+pushd $GIT_REPOS/configRepos
 git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
-cd gnome-terminal-colors-solarized
+pushd gnome-terminal-colors-solarized
 ./set_dark.sh
-cd $returnDir
+popd
+popd
 
