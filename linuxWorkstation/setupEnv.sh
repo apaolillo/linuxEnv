@@ -7,6 +7,7 @@ set -e
 EMAIL=antonio.paolillo@ulb.ac.be
 DEVENV_REPO_DIR=.
 CONFIGFILES_DIR=$DEVENV_REPO_DIR/configFiles
+GIT_REPOS=$HOME/git
 
 ## List of packages
 # Main packages
