@@ -43,18 +43,10 @@ sudo apt-get install -y --no-install-recommends $ALL_PACKAGES
 downloadAndInstallDeb chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 downloadAndInstallDeb dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.6.0_amd64.deb
 
-# Configure machine for HIPPEROS
-GIT_REPOS=$HOME/git
-mkdir -p $GIT_REPOS
-pushd $GIT_REPOS
-git clone git@github.com:hipperos/hipperosDevEnv.git
-pushd $GIT_REPOS/hipperosDevEnv
-bash setupHipperosDevEnv.sh
-popd
-popd
-
 # Configure gnome terminal
-cp $CONFIGFILES_DIR/%gconf.xml $HOME/.gconf/apps/gnome-terminal/keybindings/.
+TERMINAL_SHORTCUTS_DIR=$HOME/.gconf/apps/gnome-terminal/keybindings
+mkdir -p $TERMINAL_SHORTCUTS_DIR
+cp $CONFIGFILES_DIR/%gconf.xml $TERMINAL_SHORTCUTS_DIR/.
 
 # Color terminal with dark solarized
 mkdir -p $GIT_REPOS/configRepos
