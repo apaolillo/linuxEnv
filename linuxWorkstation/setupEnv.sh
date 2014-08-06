@@ -5,7 +5,7 @@ set -e
 
 # Important variables
 EMAIL=antonio.paolillo@ulb.ac.be
-DEVENV_REPO_DIR=.
+DEVENV_REPO_DIR=`pwd`
 CONFIGFILES_DIR=$DEVENV_REPO_DIR/configFiles
 GIT_REPOS=$HOME/git
 
