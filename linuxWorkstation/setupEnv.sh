@@ -47,7 +47,7 @@ downloadAndInstallDeb dropbox.deb https://www.dropbox.com/download?dl=packages/u
 # Configure gnome terminal
 TERMINAL_SHORTCUTS_DIR=$HOME/.gconf/apps/gnome-terminal/keybindings
 mkdir -p $TERMINAL_SHORTCUTS_DIR
-cp $CONFIGFILES_DIR/%gconf.xml $TERMINAL_SHORTCUTS_DIR/.
+cp "$CONFIGFILES_DIR/%gconf.xml" $TERMINAL_SHORTCUTS_DIR/.
 
 # Color terminal with dark solarized
 mkdir -p $GIT_REPOS/configRepos
