@@ -4,7 +4,7 @@
 set -e
 
 # Important variables
-EMAIL=antonio.paolillo@ulb.ac.be
+EMAIL=apaolill@gmail.com
 DEVENV_REPO_DIR=`pwd`
 CONFIGFILES_DIR=$DEVENV_REPO_DIR/configFiles
 GIT_REPOS=$HOME/git
@@ -12,8 +12,6 @@ GIT_REPOS=$HOME/git
 ## List of packages
 # Main packages
 ALL_PACKAGES="vim git xchat openssh-server meld gparted bpython"
-# Temporary: to integrate the dropbox icon in the Gnome Unity toolbar
-ALL_PACKAGES="$ALL_PACKAGES libappindicator1"
 
 
 function downloadAndInstallDeb
